@@ -26,6 +26,21 @@ for a in range(11):
     most_common_list.append(mode(new))
     new = [k for k in new if k != mode(new)]
 print (most_common_list)
+
+
+#finding the links of all the websites on google news (for a specific "type":
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+driver = webdriver.Firefox('C:\\Users\\Ahsan\\Downloads\\geckodriver.exe')
+driver.get("https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFZ4ZERBU0FtVnVLQUFQAQ?hl=en-CA&gl=CA&ceid=CA:en")
+elems = driver.find_element_by_xpath("//a[@href]")
+for elem in elems:
+    print(elem.get_attribute("href"))
+
+
+
+
+
 #USE TRY EXCEPT OR STH fOR WHEN THE MODE ISNT UNIQUE
 #MAKE THESE STUFF INTO FUNCTIONS SO THAT IT IS EASIER WHEN MULTIPLE ARTICLES ARE USED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #find a better way to split this so that it always starst from the beginning of the text and ends at the end of the text 
