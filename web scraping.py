@@ -4,7 +4,7 @@ MAKE STUFF INTO FUNCTIONS FIRST
 import urllib
 from urllib import request
 import bs4
-from statistics import mode
+from scipy import stats as s
 link = "https://www.theatlantic.com/ideas/archive/2020/11/trump-proved-authoritarians-can-get-elected-america/617023/"
 f = urllib.request.urlopen(link)
 soup = bs4.BeautifulSoup(f)
@@ -22,7 +22,6 @@ while j >= 0:
         temp = temp[:j] + temp[j+1:]
     j -= 1
 new = list(temp.split(' '))
-from scipy import stats as s
 most_common_list = []
 for a in range(11):
     temp_1 = s.mode(new)[0][0]
