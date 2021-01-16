@@ -59,16 +59,3 @@ for elem in elems:
 '''
 
 
-
-
-#USE TRY EXCEPT OR STH fOR WHEN THE MODE ISNT UNIQUE
-#MAKE THESE STUFF INTO FUNCTIONS SO THAT IT IS EASIER WHEN MULTIPLE ARTICLES ARE USED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#find a better way to split this so that it always starst from the beginning of the text and ends at the end of the text 
-#(for example, finding where the title or date is)
-#for now, just split it at some arbritrary indices that should work for most articles
-#delete all non-letters (SPACES SHOuLD STAY THO)
-#maybe remove capitals
-#write it so that it scrapes google news or sth
-#so the type of the article would be given, and it would determine the most used words for that article
-#append that into a database
-#in the end you can see if there's a relation between most used words and type of article, and if so, use ML

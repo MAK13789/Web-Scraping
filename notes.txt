@@ -1,19 +1,19 @@
-#find a better way to split this so that it always starst from the beginning of the text and ends at the end of the text 
+find a better way to split this so that it always starst from the beginning of the text and ends at the end of the text 
 
 
-#(for example, finding where the title or date is)
+(for example, finding where the title or date is)
 
 
-#for now, just split it at some arbritrary indices that should work for most articles
+for now, just split it at some arbritrary indices that should work for most articles
 
 
-#maybe remove capitals
+maybe remove capitals
 
 
-#write it so that it scrapes google news or sth
+write it so that it scrapes google news or sth
 
 
-#so the type of the article would be given, and it would determine the most used words for that article
+so the type of the article would be given, and it would determine the most used words for that article
 
 
 append that into a database
