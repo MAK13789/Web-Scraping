@@ -7,8 +7,6 @@ find a better way to split this so that it always starst from the beginning of t
 for now, just split it at some arbritrary indices that should work for most articles
 
 
-maybe remove capitals
-
 
 write it so that it scrapes google news or sth
 

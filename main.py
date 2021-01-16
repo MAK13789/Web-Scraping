@@ -32,7 +32,10 @@ def most_common_words(link):
         most_common_list.remove('')
     else:
         most_common_list = most_common_list[:len(most_common_list)-1]
-    return most_common_list
+    output = []
+    for b in most_common_list:
+        output.append(b.lower())
+    return output
 
 
 
