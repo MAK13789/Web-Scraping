@@ -3,7 +3,7 @@ from urllib import request
 import bs4
 from scipy import stats as s
 from bs4 import BeautifulSoup
-from urlib.request import Request, urlopen
+from urllib.request import Request, urlopen
 import re
 
 
@@ -51,27 +51,3 @@ def get_links(link):
     for link in soup.findAll('a'):
         links.append(link.get('href'))
     return links
-
-
-
-
-
-
-
-
-'''
-link = "https://www.theatlantic.com/ideas/archive/2020/11/trump-proved-authoritarians-can-get-elected-america/617023/"
-print (most_common_words(link))
-'''
-'''
-#finding the links of all the websites on google news (for a specific "type":
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-driver = webdriver.Firefox('C:\\Users\\Ahsan\\Downloads\\geckodriver.exe')
-driver.get("https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFZ4ZERBU0FtVnVLQUFQAQ?hl=en-CA&gl=CA&ceid=CA:en")
-elems = driver.find_element_by_xpath("//a[@href]")
-for elem in elems:
-    print(elem.get_attribute("href"))
-'''
-
-
