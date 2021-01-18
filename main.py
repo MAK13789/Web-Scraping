@@ -43,11 +43,19 @@ def most_common_words(link):
 
 
 def get_links(link):
-    '''takes in a link for a website and returns a list of all the links found on that website'''
+    '''takes in a link for a website and returns a list of all the links of articles found on that website '''
+    '''specifically designed for google news'''
     req = Request(link)
     html_page = urlopen(req)
     soup = BeautifulSoup(html_page, "lxml")
     links = []
     for link in soup.findAll('a'):
         links.append(link.get('href'))
-    return links
+    articles = []
+    for i in links:
+        if i != None and i[:10] == './articles':
+            correct_link = "news.google.com" + i[1:]
+            articles.append(correct_link)
+    return articles
+
+
