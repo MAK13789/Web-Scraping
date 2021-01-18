@@ -54,7 +54,7 @@ def get_links(link):
     articles = []
     for i in links:
         if i != None and i[:10] == './articles':
-            correct_link = "news.google.com" + i[1:]
+            correct_link = "https://news.google.com" + i[1:]
             articles.append(correct_link)
     return articles
 
@@ -67,5 +67,13 @@ def get_most_common_words(link):
     total_num = len(links)
     for i in range(len(links)):
         output.append(most_common_words(links[i]))
-        print ("Currently on link " + i + " out of " + total_num + " links")
+        print ("Currently on link " + str(i) + " out of " + str(total_num) + " links")
+
+
+        '''ending the code quickly just to see if it works properly'''
+        if i == 20:
+            return output
+
+
+
     return output
