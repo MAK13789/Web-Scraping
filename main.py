@@ -59,3 +59,13 @@ def get_links(link):
     return articles
 
 
+
+def get_most_common_words(link):
+    '''takes in a google news link for a specific news category, and outputs a list of the most common words for each of the articles'''
+    links = get_links(link)
+    output = []
+    total_num = len(links)
+    for i in range(len(links)):
+        output.append(most_common_words(links[i]))
+        print ("Currently on link " + i + " out of " + total_num + " links")
+    return output
