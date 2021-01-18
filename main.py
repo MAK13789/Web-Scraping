@@ -2,6 +2,9 @@ import urllib
 from urllib import request
 import bs4
 from scipy import stats as s
+from bs4 import BeautifulSoup
+from urlib.request import Request, urlopen
+import re
 
 
 
@@ -38,6 +41,16 @@ def most_common_words(link):
     return output
 
 
+
+def get_links(link):
+    '''takes in a link for a website and returns a list of all the links found on that website'''
+    req = Request(link)
+    html_page = urlopen(req)
+    soup = BeautifulSoup(html_page, "lxml")
+    links = []
+    for link in soup.findAll('a'):
+        links.append(link.get('href'))
+    return links
 
 
 
