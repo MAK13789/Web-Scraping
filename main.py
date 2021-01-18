@@ -5,6 +5,7 @@ from scipy import stats as s
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 import re
+import requests
 
 
 
@@ -55,7 +56,9 @@ def get_links(link):
     for i in links:
         if i != None and i[:10] == './articles':
             correct_link = "https://news.google.com" + i[1:]
-            articles.append(correct_link)
+            r = requests.get(correct_link, allow_redirects=True)
+            final_link = r.url
+            articles.append(final_link)
     return articles
 
 
