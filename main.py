@@ -53,12 +53,18 @@ def get_links(link):
     for link in soup.findAll('a'):
         links.append(link.get('href'))
     articles = []
-    for i in links:
-        if i != None and i[:10] == './articles':
-            correct_link = "https://news.google.com" + i[1:]
+    for i in range(len(links)):
+        if links[i] != None and links[i][:10] == './articles':
+            correct_link = "https://news.google.com" + links[i][1:]
             r = requests.get(correct_link, allow_redirects=True)
             final_link = r.url
             articles.append(final_link)
+            #print (articles)   #just to see if it is working
+            '''stopping it early to see if the code is actually working'''
+            if i == 10:
+                return articles
+
+
     return articles
 
 
