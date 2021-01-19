@@ -73,7 +73,16 @@ def get_most_common_words(link):
     output = []
     total_num = len(links)
     for i in range(len(links)):
-        output.append(most_common_words(links[i]))
+        temp = None
+        try:
+            temp = most_common_words(links[i])
+        except:
+            print ("some error")
+        if temp != None:
+            output.append(temp)
+
+
+        #output.append(most_common_words(links[i]))
         print ("Currently on link " + str(i) + " out of " + str(total_num) + " links")
 
         '''
