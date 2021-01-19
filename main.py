@@ -61,7 +61,7 @@ def get_links(link):
             articles.append(final_link)
             #print (articles)   #just to see if it is working
             '''stopping it early to see if the code is actually working'''
-            if i == 10:
+            if len(articles) == 5:
                 return articles
 
 
