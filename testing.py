@@ -14,4 +14,5 @@ print (temp)
 
 
 from main import get_most_common_words
-print (get_most_common_words("https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pRU3lnQVAB?hl=en-PK&gl=PK&ceid=PK%3Aen"))
+#print (get_most_common_words("https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pRU3lnQVAB?hl=en-PK&gl=PK&ceid=PK%3Aen"))
+#print (get_most_common_words("https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFZ6WWpFU0FtVnVLQUFQAQ?hl=en-PK&gl=PK&ceid=PK%3Aen"))

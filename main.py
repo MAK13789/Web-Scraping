@@ -80,9 +80,6 @@ def get_most_common_words(link):
             print ("some error")
         if temp != None:
             output.append(temp)
-
-
-        #output.append(most_common_words(links[i]))
         print ("Currently on link " + str(i) + " out of " + str(total_num) + " links")
 
         '''
