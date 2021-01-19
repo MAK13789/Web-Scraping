@@ -53,18 +53,16 @@ def get_links(link):
     for link in soup.findAll('a'):
         links.append(link.get('href'))
     articles = []
+    #print (len(links))  can be really big, like upto 737!!! 
     for i in range(len(links)):
         if links[i] != None and links[i][:10] == './articles':
             correct_link = "https://news.google.com" + links[i][1:]
             r = requests.get(correct_link, allow_redirects=True)
             final_link = r.url
             articles.append(final_link)
-            #print (articles)   #just to see if it is working
             '''stopping it early to see if the code is actually working'''
-            if len(articles) == 5:
+            if len(articles) == 10:
                 return articles
-
-
     return articles
 
 
@@ -78,11 +76,9 @@ def get_most_common_words(link):
         output.append(most_common_words(links[i]))
         print ("Currently on link " + str(i) + " out of " + str(total_num) + " links")
 
-
-        '''ending the code quickly just to see if it works properly'''
+        '''
+        #ending the code quickly just to see if it works properly
         if i == 20:
             return output
-
-
-
+        '''
     return output
